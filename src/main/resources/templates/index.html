@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Principal - Concesionario de IvanXanZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #141414);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #0b0f0d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            border-bottom: 4px solid #76B900;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 166, 80, 0.2);
+            color: #ffffff;
+        }
+        h1 { margin-top: 0; color: #76B900; }
+        h2 { color: #ffffff; }
+        p { color: #b0b0b0; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px; }
+        .menu-card {
+            background: #76B900;
+            color: #0a0a0a;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(118, 185, 0, 0.3);
+        }
+        .menu-card:hover {
+            background: #5d9200;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(118, 185, 0, 0.5);
+        }
+        .logout {
+            display: inline-block;
+            margin-top: 30px;
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .logout:hover {
+            color: #ff1a1a;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Concesionario de IvanXanZ🏍️</h1>
+    <p>Panel de Administración General</p>
+</header>
+
+<div class="container">
+    <h2>¡Bienvenido al sistema!</h2>
+    <p>Selecciona una opción del menú para administrar los registros de la base de datos:</p>
+
+    <div class="menu-grid">
+        <a href="/productos" class="menu-card">📦 Motos / Productos</a>
+        <a href="/usuarios" class="menu-card">👥 Usuarios y Clientes</a>
+        <a href="#" class="menu-card">🧑‍💼 Vendedores</a>
+        <a href="#" class="menu-card">⚙️ Refacciones</a>
+        <a href="#" class="menu-card">🛠️ Recepción de Taller</a>
+        <a href="#" class="menu-card">💰 Pagos / Ventas</a>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="/login" class="logout">Cerrar Sesión</a>
+    </div>
+</div>
+
+</body>
+</html>
